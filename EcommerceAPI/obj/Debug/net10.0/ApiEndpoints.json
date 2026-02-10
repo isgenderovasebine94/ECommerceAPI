@@ -1,25 +1,31 @@
 [
   {
-    "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Categories",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
-    "Method": "CreateCategory",
-    "RelativePath": "api/Categories",
+    "ContainingType": "EcommerceAPI.Controllers.Auth.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/AuthLogin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "category",
-        "Type": "EcommerceAPI.Entities.Category",
+        "Name": "login",
+        "Type": "EcommerceAPI.Entities.Dtos.Auth.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.Auth.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/AuthRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "register",
+        "Type": "EcommerceAPI.Entities.Dtos.Auth.RegisterDto",
         "IsRequired": true
       }
     ],
@@ -27,8 +33,60 @@
   },
   {
     "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
-    "Method": "GetById",
-    "RelativePath": "api/Categories/{id}",
+    "Method": "CreateCategory",
+    "RelativePath": "api/Categories/CreateCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "EcommerceAPI.Entities.Dtos.Categories.CreateCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/Categories/DeleteCategory",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/Categories/GetAllCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "EcommerceAPI.Entities.Dtos.Categories.GetCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
+    "Method": "GetCategoryById",
+    "RelativePath": "api/Categories/GetCategoryById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -36,6 +94,106 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CategoriesController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Categories/UpdateCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "update",
+        "Type": "EcommerceAPI.Entities.Dtos.Categories.UpdateCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CountriesController",
+    "Method": "CreateCountry",
+    "RelativePath": "api/Countries/CreateCountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "create",
+        "Type": "EcommerceAPI.Entities.Dtos.Countries.CreateCountryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CountriesController",
+    "Method": "DeleteCountry",
+    "RelativePath": "api/Countries/DeleteCountry",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CountriesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Countries/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CountriesController",
+    "Method": "GetCountryById",
+    "RelativePath": "api/Countries/GetCountryById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.CountriesController",
+    "Method": "UpdateCountry",
+    "RelativePath": "api/Countries/UpdateCountry",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "update",
+        "Type": "EcommerceAPI.Entities.Dtos.Categories.UpdateCategoryDto",
         "IsRequired": true
       }
     ],
@@ -43,24 +201,28 @@
   },
   {
     "ContainingType": "EcommerceAPI.Controllers.ProductsController",
-    "Method": "Create",
-    "RelativePath": "api/Products",
-    "HttpMethod": "POST",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/Products/GetAllProducts",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
+    "Parameters": [],
+    "ReturnTypes": [
       {
-        "Name": "dto",
-        "Type": "EcommerceAPI.Entities.CreateProductDto",
-        "IsRequired": true
+        "Type": "EcommerceAPI.Entities.Dtos.Products.GetProductDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
     "ContainingType": "EcommerceAPI.Controllers.WeatherForecastController",
     "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "RelativePath": "api/WeatherForecast/Get",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

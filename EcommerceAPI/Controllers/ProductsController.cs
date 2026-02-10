@@ -1,38 +1,35 @@
-﻿using EcommerceAPI.DAL;
-using EcommerceAPI.Entities;
+﻿using AutoMapper;
+using EcommerceAPI.DAL;
+using EcommerceAPI.Entities.Dtos.Products;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EcommerceAPI.Controllers
 {
+    [Route("api/[controller]/[action]")]
     [ApiController]
-    [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly EcommerceDbContext _context;
-
-        public ProductsController(EcommerceDbContext context)
+        private readonly IMapper _mapper;
+        public ProductsController(EcommerceDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateProductDto dto)
+        [HttpGet]
+        public async Task<ActionResult<GetProductDto>> GetAllProducts()
         {
-            if (dto == null)
-                return BadRequest();
-
-            var product = new Product
+            var result = await _context.Products.Include(p=>p.Category).Select(p=>new GetProductDto
             {
-                Name = dto.Name,
-                Desc = dto.Desc,
-                Price = dto.Price,
-                CategoryId = dto.CategoryId
-            };
-
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-
-            return Ok(product);
+                CategoryName=p.Category.Name,
+                Desc=p.Desc,
+                Name=p.Name,
+                CategoryId=p.CategoryId,
+                Price=p.Price
+            }).ToListAsync();
+            return Ok(result);
+            
         }
     }
 }

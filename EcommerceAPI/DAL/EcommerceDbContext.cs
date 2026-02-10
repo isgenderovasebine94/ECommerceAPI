@@ -1,18 +1,24 @@
 ﻿using EcommerceAPI.Entities;
+using EcommerceAPI.Entities.Auth;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace EcommerceAPI.DAL
 {
-    public class EcommerceDbContext : DbContext
+    public class EcommerceDbContext :IdentityDbContext<AppUser>
 
     {
         public EcommerceDbContext(DbContextOptions<EcommerceDbContext> options) : base(options)
         {
 
         }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,8 +35,9 @@ namespace EcommerceAPI.DAL
             //    .HasMaxLength(100)
             //    .IsRequired();
 
-
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Ignore<IdentityPasskeyData>();
                     }
 
 

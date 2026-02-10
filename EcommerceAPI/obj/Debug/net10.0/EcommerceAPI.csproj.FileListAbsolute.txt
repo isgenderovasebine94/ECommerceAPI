@@ -6,9 +6,15 @@ C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\EcommerceAPI.d
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\EcommerceAPI.runtimeconfig.json
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\EcommerceAPI.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\EcommerceAPI.pdb
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Azure.Core.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\FluentValidation.dll
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Humanizer.dll
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
@@ -144,6 +150,7 @@ C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.A
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.sourcelink.json
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -160,3 +167,4 @@ C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.p
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\EcommerceAPI.genruntimeconfig.cache
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\ref\EcommerceAPI.dll
 C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\User\Desktop\EcommerceAPI\EcommerceAPI\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
